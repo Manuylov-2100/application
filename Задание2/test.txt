@@ -1,0 +1,3 @@
+WITHDRAW Manuylov 10000
+BALANCE Manuylov
+DEPOSIT Manuylov 5000
