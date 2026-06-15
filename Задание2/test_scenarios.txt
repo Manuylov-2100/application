@@ -1,0 +1,35 @@
+# Тестовые сценарии для банковской системы
+# Для Manuylov (ID: 70210562)
+
+# Сценарий 1: Проверка начального состояния
+BALANCE Manuylov
+
+# Сценарий 2: Операции с клиентом
+WITHDRAW Manuylov 10000
+BALANCE Manuylov
+DEPOSIT Manuylov 5000
+BALANCE Manuylov
+TABLE
+
+# Сценарий 3: Начисление процентов клиенту
+INCOME 2
+BALANCE Manuylov
+TABLE
+
+# Сценарий 4: Дополнительные операции с основным клиентом
+WITHDRAW Manuylov 50000
+DEPOSIT Manuylov 25000
+BALANCE Manuylov
+
+# Сценарий 5: Повторное начисление процентов
+INCOME 1
+BALANCE Manuylov
+
+# Сценарий 6: Создание нового клиента
+DEPOSIT Ivanov 100
+TRANSFER Manuylov Ivanov 1000
+BALANCE Ivanov
+BALANCE Manuylov
+
+# Сценарий 7: Проверка ошибочных операций
+BALANCE Nonexistent
